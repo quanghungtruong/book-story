@@ -1,0 +1,25 @@
+/*=====LG======*/
+@media (min-width:1200px) {
+    
+}
+/*=====MD======*/
+@media (min-width:992px) and (max-width:1199px) {
+    
+}
+/*=====SM======*/
+@media (min-width:768px) and (max-width:991px) {
+    
+}
+/*=====XS======*/
+@media screen and (max-width:767px) {
+    body, html{
+        width:767px;
+    }
+    #templatemo_header{
+        display: none;
+    }
+    #templatemo_container, #templatemo_content, #templatemo_content #templatemo_content_left, #templatemo_content #templatemo_content_right{
+        width: 100%;
+    }
+    
+}
