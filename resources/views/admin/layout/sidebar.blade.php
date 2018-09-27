@@ -16,13 +16,13 @@
                                 <a href="index.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                             </li>
                             <li>
-                                <a href="#" class="active"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                                <a href="#" class="active"><i class="fa fa-bar-chart-o fa-fw"></i> Category<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="flot.html">Flot Charts</a>
+                                        <a href="{{url('admin/category')}}">All Category</a>
                                     </li>
                                     <li>
-                                        <a href="morris.html">Morris.js Charts</a>
+                                        <a href="{{url('admin/addcategory')}}">Add Category</a>
                                     </li>
                                 </ul>
                                 <!-- /.nav-second-level -->
@@ -34,7 +34,7 @@
                                         <a href="{{url('admin/booklist')}}">All Book</a>
                                     </li>
                                     <li>
-                                        <a href="{{url('admin/bookaddnew')}}">Add New</a>
+                                        <a href="{{url('admin/bookaddnew')}}">Add Book</a>
                                     </li>
                                 </ul>
                             </li>

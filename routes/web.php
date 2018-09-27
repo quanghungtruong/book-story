@@ -21,6 +21,12 @@ Route::group(['prefix'=>'admin'], function(){
 	Route::get('/bookaddnew', function(){
 		return view('admin.book.bookaddnew');
 	});
+	Route::get('/category', function(){
+		return view('admin.category.category');
+	});
+	Route::get('/addcategory', function(){
+		return view('admin.category.editcategory');
+	});
 });
 Route::get('/', function () {
     return view('home');
