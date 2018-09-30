@@ -19,10 +19,10 @@
                                 <a href="#" class="active"><i class="fa fa-bar-chart-o fa-fw"></i> Category<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="{{url('admin/category')}}">All Category</a>
+                                        <a href="{{url('admin/category/list')}}">All Category</a>
                                     </li>
                                     <li>
-                                        <a href="{{url('admin/addcategory')}}">Add Category</a>
+                                        <a href="{{url('admin/category/add')}}">Add Category</a>
                                     </li>
                                 </ul>
                                 <!-- /.nav-second-level -->

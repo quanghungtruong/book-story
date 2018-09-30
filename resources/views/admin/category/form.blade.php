@@ -16,14 +16,28 @@
             </div>
             <div class="panel-body">
                 <div class="row">
-                    <div class="col-lg-4">
-                        <form role="form" method="post" action="{{url('admin/addcategory')}}">
+                    <div class="col-lg-8">
+                        @if (count($errors) > 0)
+                        <div>
+                            <ul>
+                                @foreach ($errors as $key=>$err)
+                                    <li>{{$err}}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
+                        <form role="form" method="post" action="{{route('postCate')}}">
+                            <input type="hidden" name="_token" value="{{csrf_token()}}">
                             <div class="form-group">
                                 <label>Category Name</label>
                                 <input class="form-control" name="cat_name">
                             </div>
                             <div class="form-group">
-                                <label>Selects</label>
+                                <label>Alias</label>
+                                <input class="form-control" name="alias">
+                            </div>
+                            <div class="form-group">
+                                <label>Category Parent</label>
                                 <select class="form-control">
                                     <option>1</option>
                                     <option>2</option>
@@ -35,23 +49,7 @@
                             <button type="submit" class="btn btn-default">Submit Button</button>
                         </form>
                     </div>
-                    <!-- /.col-lg-6 (nested) -->
-                    <div class="col-lg-8">
-                        <h3>Category List</h3>
-                        <div class="dataTable_wrapper">
-                            <table class="table table-striped table-bordered table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Category Name</th>
-                                        <th>Parent Name</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                    </div>
-                    <!-- /.col-lg-6 (nested) -->
+                    <!-- /.col-lg-6 (nested) -->                    
                 </div>
                 <!-- /.row (nested) -->
             </div>
