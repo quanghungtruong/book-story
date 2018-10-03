@@ -11,15 +11,12 @@
 |
 */
 // Amin
+
 Route::group(['prefix'=>'admin'], function(){
+	Route::get('login', 'Auth\LoginController@showLogin');
+	Route::post('login', ['as'=>'doLogin', 'use'=>'Auth\LoginController@doLogin']);
 	Route::get('/', function(){
 		return view('admin.home');
-	});
-	Route::get('/booklist', function(){
-		return view('admin.book.booklist');
-	});
-	Route::get('/bookaddnew', function(){
-		return view('admin.book.bookaddnew');
 	});
 	Route::group(['prefix'=>'category'], function(){
 		Route::get('/', function(){
