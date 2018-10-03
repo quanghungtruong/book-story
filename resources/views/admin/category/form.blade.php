@@ -20,7 +20,7 @@
                         @if (count($errors) > 0)
                         <div>
                             <ul>
-                                @foreach ($errors as $key=>$err)
+                                @foreach ($errors->all() as $key=>$err)
                                     <li>{{$err}}</li>
                                 @endforeach
                             </ul>
@@ -38,8 +38,8 @@
                             </div>
                             <div class="form-group">
                                 <label>Category Parent</label>
-                                <select class="form-control">
-                                    <option>1</option>
+                                <select class="form-control" name="parent_id">
+                                    <option value="1">1</option>
                                     <option>2</option>
                                     <option>3</option>
                                     <option>4</option>

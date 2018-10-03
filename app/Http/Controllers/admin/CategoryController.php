@@ -19,5 +19,9 @@ class CategoryController extends Controller
 	{
 		$cate = new Category();
 		$cate->cat_name = $request->cat_name;
+		$cate->alias = $request->alias;
+		$cate->parent_id = $request->parent_id;
+		$cate->save();
+		return redirect()->route('list');
 	} 
 }

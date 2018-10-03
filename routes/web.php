@@ -25,9 +25,9 @@ Route::group(['prefix'=>'admin'], function(){
 		Route::get('/', function(){
 			return view('admin.category.list');
 		});
-		Route::get('list', function(){
+		Route::get('list', ['as'=>'list', function(){
 			return view('admin.category.list');
-		});
+		}]);
 		Route::get('add',['as'=>'admin.category.getCate','uses'=>'admin\CategoryController@getCate']);
 		Route::post('add',['as'=>'postCate','uses'=>'admin\CategoryController@postCate']);
 	});
