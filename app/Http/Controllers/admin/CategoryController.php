@@ -23,5 +23,11 @@ class CategoryController extends Controller
 		$cate->parent_id = $request->parent_id;
 		$cate->save();
 		return redirect()->route('list');
-	} 
+	}
+
+	public function listCategory()
+	{
+		$data = \App\Models\Category::all();
+		return view('admin.category.list', compact('data'));
+	}
 }

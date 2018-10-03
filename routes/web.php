@@ -13,19 +13,15 @@
 // Amin
 
 Route::group(['prefix'=>'admin'], function(){
-	Route::get('login', 'Auth\LoginController@showLogin');
-	Route::post('login', ['as'=>'doLogin', 'use'=>'Auth\LoginController@doLogin']);
 	Route::get('/', function(){
 		return view('admin.home');
 	});
+	Route::post('login', ['as'=>'doLogin', 'use'=>'Auth\LoginController@doLogin']);
+	Route::get('login', 'Auth\LoginController@showLogin');
 	Route::group(['prefix'=>'category'], function(){
-		Route::get('/', function(){
-			return view('admin.category.list');
-		});
-		Route::get('list', ['as'=>'list', function(){
-			return view('admin.category.list');
-		}]);
-		Route::get('add',['as'=>'admin.category.getCate','uses'=>'admin\CategoryController@getCate']);
+		Route::get('/', 'admin\CategoryController@listCategory');
+		Route::get('list', ['as'=>'list', 'uses'=>'admin\CategoryController@listCategory']);
+		Route::get('add',['as'=>'getCate','uses'=>'admin\CategoryController@getCate']);
 		Route::post('add',['as'=>'postCate','uses'=>'admin\CategoryController@postCate']);
 	});
 });
