@@ -20,8 +20,8 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Category Name</th>
-                                <th>Parent</th>
+                                <th>Book Name</th>
+                                <th>Category</th>
                                 <th>Created Date</th>
                                 <th>Updated Date</th>
                                 <th>Action</th>
@@ -31,23 +31,16 @@
                             @foreach($data as $list)
                             <tr class="odd gradeX">
                                 <td>{{$list->id}}</td>
-                                <td>
-                                    <a href="">
-                                        {{$list->cat_name}}</td>
-                                    </a>
+                                <td>{{$list->cat_name}}</td>
                                 <td>{{$list->parent_id}}</td>
                                 <td class="center">{{$list->created_at}}</td>
                                 <td class="center">{{$list->updated_at}}</td>
-                                <td class="center">
-                                    <a href="{{url('admin/category/del/'.$list->id)}}">
-                                        <i class="fa fa-remove" title="Remove Category"></i>
-                                    </a>
-                                </td>
+                                <td><i class="fa fa-fw" aria-hidden="true" title="Copy to use remove"></td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
-                </div>  
+                </div>
             </div>
             <!-- /.panel-body -->
         </div>

@@ -12,7 +12,8 @@ class CategoryController extends Controller
 {
 	public function getCate()
 	{
-		return view('admin.category.form');
+		$data = \App\Models\Category::all();
+		return view('admin.category.form', compact('data'));
 	}
 
 	public function postCate(CategoryRequest $request)
@@ -25,9 +26,20 @@ class CategoryController extends Controller
 		return redirect()->route('list');
 	}
 
-	public function listCategory()
+	public function listCate()
 	{
 		$data = \App\Models\Category::all();
 		return view('admin.category.list', compact('data'));
+	}
+
+	public function delCate($id)
+	{
+		$del = \App\Models\Category::where('id', $id)->delete();
+		return redirect()->route('list');
+	}
+
+	public function editCate(CategoryRequest $request, $id)
+	{
+
 	}
 }

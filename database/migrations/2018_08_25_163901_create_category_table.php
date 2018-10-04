@@ -18,8 +18,6 @@ class CreateCategoryTable extends Migration
             $table->string('cat_name');
             $table->integer('parent_id');
             $table->string('for_type');            
-            $table->date('upd_date');
-            $table->date('ins_date');
             $table->timestamps();
         });
     }

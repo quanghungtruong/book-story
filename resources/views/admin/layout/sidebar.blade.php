@@ -31,10 +31,10 @@
                                 <a href="#" onclick="javascript:void(0)"><i class="fa fa-table fa-fw"></i> Book Lists</a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="{{url('admin/booklist')}}">All Book</a>
+                                        <a href="{{url('admin/book/list')}}">All Book</a>
                                     </li>
                                     <li>
-                                        <a href="{{url('admin/bookaddnew')}}">Add Book</a>
+                                        <a href="{{url('admin/book/add')}}">Add Book</a>
                                     </li>
                                 </ul>
                             </li>

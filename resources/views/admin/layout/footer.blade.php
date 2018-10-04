@@ -9,6 +9,7 @@
 <script src="{{asset('/public/admin/js/dataTables/jquery.dataTables.min.js')}}"></script>
 <script src="{{asset('/public/admin/js/dataTables/dataTables.bootstrap.min.js')}}"></script>
 <script src="{{asset('/public/admin/js/startmin.js')}}"></script>
+<script src="{{asset('/public/admin/js/bookstoreAdmin.js')}}"></script>
 <script>
     $(document).ready(function() {
         $('#dataTables-example').DataTable({

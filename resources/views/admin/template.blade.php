@@ -9,6 +9,8 @@
         <title>Startmin - Bootstrap Admin Theme</title>
         <!-- Bootstrap Core CSS -->
         <link href="{{asset('/public/admin/css/bootstrap.min.css')}}" rel="stylesheet">
+        <link href="{{asset('/public/admin/css/dataTables/dataTables.bootstrap.css')}}" rel="stylesheet">
+        <link href="{{asset('/public/admin/css/dataTables/dataTables.responsive.css')}}" rel="stylesheet">
         <!-- MetisMenu CSS -->
         <link href="{{asset('/public/admin/css/metisMenu.min.css')}}" rel="stylesheet">
         <!-- Timeline CSS -->
@@ -19,6 +21,7 @@
         <link href="{{asset('/public/admin/css/morris.css')}}" rel="stylesheet">
         <!-- Custom Fonts -->
         <link href="{{asset('/public/admin/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('/public/admin/css/style.css')}}" rel="stylesheet">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
