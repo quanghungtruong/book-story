@@ -9,10 +9,14 @@
 <!-- /.row -->
 <div class="row">
     <div class="col-lg-12">
-        <div class="panel panel-default">
+        @if(Session::has('message'))
+        <div class="show_message panel panel-success">
             <div class="panel-heading">
-                DataTables Advanced Tables
+                {{Session::get('message')}}
             </div>
+        </div>
+        @endif
+        <div class="panel panel-default">
             <!-- /.panel-heading -->
             <div class="panel-body">
                 <div class="dataTable_wrapper">
@@ -24,7 +28,8 @@
                                 <th>Parent</th>
                                 <th>Created Date</th>
                                 <th>Updated Date</th>
-                                <th>Action</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -39,8 +44,13 @@
                                 <td class="center">{{$list->created_at}}</td>
                                 <td class="center">{{$list->updated_at}}</td>
                                 <td class="center">
+                                    <a href="{{url('admin/category/edit/'.$list->id)}}">
+                                        <i class="fa fa-edit" title="Remove Category"></i> Edit
+                                    </a>
+                                </td>
+                                <td class="center">
                                     <a href="{{url('admin/category/del/'.$list->id)}}">
-                                        <i class="fa fa-remove" title="Remove Category"></i>
+                                        <i class="fa fa-remove" title="Remove Category"></i> Delete
                                     </a>
                                 </td>
                             </tr>

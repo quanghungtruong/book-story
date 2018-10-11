@@ -23,6 +23,8 @@ Route::group(['prefix'=>'admin'], function(){
 		Route::get('list', ['as'=>'list', 'uses'=>'admin\CategoryController@listCate']);
 		Route::get('add', ['as'=>'getCate','uses'=>'admin\CategoryController@getCate']);
 		Route::post('add', ['as'=>'postCate','uses'=>'admin\CategoryController@postCate']);
+		Route::get('/edit/{id}', 'admin\CategoryController@showEditCate')->where('id', '[0-9]+');
+		//Route::post('edit', ['as'=>'postEditCate','uses'=>'admin\CategoryController@postEditCate']);
 		Route::get('/del/{id}', 'admin\CategoryController@delCate')->where('id', '[0-9]+');
 	});
 	Route::group(['prefix'=>'book'], function(){
